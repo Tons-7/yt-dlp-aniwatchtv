@@ -1,19 +1,47 @@
-This is a extractor plugin for [yt-dlp](https://github.com/yt-dlp/yt-dlp) that enables downloading content from [HiAnime](https://hianime.to/).
-It supports playlist as well as single episodes.
+# yt-dlp-aniwatchtv
+
+A [yt-dlp](https://github.com/yt-dlp/yt-dlp) extractor plugin for [aniwatchtv.to](https://aniwatchtv.to).
+
+Based on [yt-dlp-hianime](https://github.com/pratikpatel8982/yt-dlp-hianime) by pratikpatel8982.
+
+---
 
 ## Installation
-If you are using python, you can run the following command to install this plugin:
-```bash
-python -m pip install -U https://github.com/pratikpatel8982/yt-dlp-hianime/archive/master.zip
+
+### Option A — pip (Python yt-dlp)
+
 ```
-You can view [Plugin Installation Guide](https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#installing-plugins)
+pip install -U https://github.com/Tons-7/yt-dlp-aniwatchtv/archive/master.zip
+```
+
+### Option B — Standalone yt-dlp `.exe` (manual)
+
+1. Download this repo as a ZIP and extract it
+2. Create this folder if it doesn't exist:
+   ```
+   %APPDATA%\yt-dlp\plugins\aniwatch\yt_dlp_plugins\extractor\
+   ```
+3. Copy `aniwatch.py` and `megacloud.py` into that folder
+
+The final structure should look like:
+```
+%APPDATA%\yt-dlp\plugins\aniwatch\yt_dlp_plugins\extractor\aniwatch.py
+%APPDATA%\yt-dlp\plugins\aniwatch\yt_dlp_plugins\extractor\megacloud.py
+```
+
+---
 
 ## Usage
 
-This plugin will be invoked automatically when it detects compatible url.
+Once installed, yt-dlp will automatically use this plugin for any `aniwatchtv.to` URL — no extra flags needed:
+
+```
+yt-dlp "https://aniwatchtv.to/watch/one-piece-100?ep=2142"
+```
+
+---
 
 ## Requirements
 
-Python 3.11+ and requests
-
-Recommended to use with yt-dlp python package instead of binaries.
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp) latest
+- Python `requests` library (`pip install requests`)

@@ -2,7 +2,13 @@ import base64
 import re
 import requests
 from typing import Callable, Iterable, TypeVar, overload, Literal, TypeAlias, Any
-from enum import StrEnum, IntFlag
+from enum import IntFlag
+try:
+    from enum import StrEnum
+except ImportError:
+    from enum import Enum
+    class StrEnum(str, Enum):
+        pass
 
 DEFAULT = object()
 HEXDIGITS = "0123456789abcdef"

@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 universal = true
 
 [project]
-name = "yt-dlp-hianime"
+name = "yt-dlp-aniwatchtv"
 version = "3.0.0"
 dependencies = [
     "requests>=2.32.4"
